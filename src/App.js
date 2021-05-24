@@ -67,14 +67,13 @@ function App() {
     };
 
     const handleWordClick = (word) => {
-        setFilters(filters.filter(f => f.property !== "body").concat({
+        setFilters(filters => filters.filter(f => f.property !== "body").concat({
             execute: (review) => {
                 return review.body.toLowerCase().indexOf(word.value) >= 0;
             },
             property: "body",
             display: "Body contains \"" + word.value + "\""
         }));
-        return false;
     };
 
     const handleFiltersChange = (tags, changedTags, changedIndexes) => {
@@ -93,7 +92,8 @@ function App() {
                     <div className="block review-ratings-pie">
                         <h2>Reviews by Rating</h2>
                         <p>Click on a pie piece to filter reviews by that rating.</p>
-                        <PieChart data={dataUtilities.groupBy(reviewsData, r => Math.floor(r.rating))} onClick={handlePieClick}/>
+                        <PieChart data={dataUtilities.groupBy(reviewsData, r => Math.floor(r.rating))}
+                                  onClick={handlePieClick}/>
                     </div>
                 </div>
 
@@ -103,19 +103,19 @@ function App() {
                         <p>Click on a word to show reviews that contain that word.</p>
                         <WordCloud
                             onClick={handleWordClick}
-                            data={getWordCounts(reviewsData.map(d => d.body))} />
+                            data={getWordCounts(reviewsData.map(d => d.body))}/>
                     </div>
                 </div>
 
-                <div className="review-filter item-center">
+                <div className=" item-center">
                     <div className="block">
                         <h2>Filters</h2>
                         {filters.length > 0
-                            ? <TagList tags={filters.map(f => f.display)} onChange={handleFiltersChange} />
+                            ? <TagList tags={filters.map(f => f.display)} onChange={handleFiltersChange}/>
                             : <p>No filters: Showing all reviews</p>
                         }
                     </div>
-                    <div className="block">
+                    <div className="block review-filter">
                         <h2>Reviews ({reviews.length} matching)</h2>
                         <ul className="reviews-list">
                             {reviews.map(r =>

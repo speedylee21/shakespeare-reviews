@@ -13,24 +13,24 @@ const PieChart = ({data, onClick}) => {
     }
 
     return <Pie
-        height={400}
+        height={300}
         width={400}
         data={toNivoPie(data)}
         onClick={onClick}
-        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+        margin={{top: 40, right: 80, bottom: 80, left: 80}}
         innerRadius={0.3}
         padAngle={0.7}
         cornerRadius={3}
         activeOuterRadiusOffset={8}
-        colors={{ scheme: 'yellow_green' }}
+        colors={{scheme: 'yellow_green'}}
         borderWidth={1}
-        borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
+        borderColor={{from: 'color', modifiers: [['darker', 0.2]]}}
         arcLinkLabelsSkipAngle={10}
         arcLinkLabelsTextColor="#333333"
         arcLinkLabelsThickness={2}
-        arcLinkLabelsColor={{ from: 'color' }}
+        arcLinkLabelsColor={{from: 'color'}}
         arcLabelsSkipAngle={10}
-        arcLabelsTextColor={{ from: 'color', modifiers: [ [ 'darker', 2 ] ] }}
+        arcLabelsTextColor={{from: 'color', modifiers: [['darker', 2]]}}
         legends={[
             {
                 anchor: 'bottom',

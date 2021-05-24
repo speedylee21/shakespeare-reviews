@@ -20,6 +20,8 @@ const WordCloud = React.memo(({data, onClick}) => {
             colorOptions={{luminosity: 'dark', hue: 'green'}}
             tags={toWordCloud(data)}>
         </TagCloud>);
+}, (prevProps, nextProps) => {
+    return Object.keys(nextProps.data).length === Object.keys(prevProps.data).length
 });
 
 export default WordCloud;

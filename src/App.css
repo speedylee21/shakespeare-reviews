@@ -7,11 +7,17 @@
 }
 
 .item {
-    width: 400px; /* A fixed width as the default */
+    width: 33vw; /* A fixed width as the default */
 }
 
 .item-center {
+    width: 33vw;
     flex-grow: 1; /* Set the middle element to grow and stretch */
+}
+
+.review-filter {
+    height: 70vh;
+    overflow-y: scroll;
 }
 
 .block {
@@ -19,16 +25,20 @@
     border-radius: 5px;
     border: 1px solid #5f7c4e;
     padding: 5px;
-    margin:10px;
+    margin: 10px;
 }
 
 .block h2 {
-    margin:0 0 10px 0;
+    margin: 0 0 10px 0;
     padding: 0 0 5px 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 14pt;
     border-bottom: 1px solid #5f7c4e;
     text-transform: uppercase;
+}
+
+.review-tag-cloud {
+    min-width: 300px;
 }
 
 h1.heading {
