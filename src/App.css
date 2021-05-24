@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+.shakespeare-app {
+    background-color: #f1f5ef;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.item {
+    width: 400px; /* A fixed width as the default */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.item-center {
+    flex-grow: 1; /* Set the middle element to grow and stretch */
 }
 
-.App-link {
-  color: #61dafb;
+.block {
+    background-color: #FFF;
+    border-radius: 5px;
+    border: 1px solid #5f7c4e;
+    padding: 5px;
+    margin:10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.block h2 {
+    margin:0 0 10px 0;
+    padding: 0 0 5px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+    border-bottom: 1px solid #5f7c4e;
+    text-transform: uppercase;
+}
+
+h1.heading {
+    background-color: #c7d6be;
+    height: 45px;
+    margin: 0;
+    padding: 5px 0 0 20px;
+}
+
+span.react-tagsinput-tag {
+    background-color: #c7d6be;
+}
+
+div.react-tagsinput {
+    border: none;
+}
+
+ul.reviews-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.reviews-list h3 {
+    font: bold 22px/1.5 Helvetica, Verdana, sans-serif;
+    margin: 0;
+}
+
+ul.reviews-list h3 span {
+    font: normal 16px/.5 Helvetica, Verdana, sans-serif;
+}
+
+ul.reviews-list li div {
+    float: left;
+    margin: 0 15px 0 0;
+    font-size: 21pt;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+ul.reviews-list li p {
+    font: 200 12px/1.5 Georgia, Times New Roman, serif;
+    margin: 0;
+}
+
+ul.reviews-list li {
+    padding: 10px;
+    overflow: auto;
+    margin: 10px 0;
+}
+
+.rating-0 {
+    background-color: #ffffe5;
+}
+
+.rating-1 {
+    background-color: #f7fcb9;
+}
+
+.rating-2 {
+    background-color: #d9f0a3;
+}
+
+.rating-3 {
+    background-color: #addd8e;
+}
+
+.rating-4 {
+    background-color: #78c679;
+}
+
+.rating-5 {
+    background-color: #41ab5d;
 }
